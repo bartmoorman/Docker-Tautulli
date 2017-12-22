@@ -8,7 +8,7 @@ RUN apt-get update \
  && apt-get install --yes --no-install-recommends \
     git \
     python \
- && git clone -b beta https://github.com/JonnyWong16/plexpy.git \
+ && git clone -b nightly https://github.com/JonnyWong16/plexpy.git \
  && apt-get autoremove --yes --purge \
  && apt-get clean \
  && rm --recursive --force /var/lib/apt/lists/* /tmp/* /var/tmp/*

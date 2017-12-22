@@ -8,5 +8,5 @@ docker run \
 --hostname tautulli \
 --volume tautulli-config:/config \
 --publish 8181:8181 \
-bmoorman/tautulli
+bmoorman/tautulli:nightly
 ```
