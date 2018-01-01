@@ -8,6 +8,7 @@ RUN apt-get update \
  && apt-get install --yes --no-install-recommends \
     git \
     python \
+    python-idna \
  && git clone -b beta https://github.com/JonnyWong16/plexpy.git \
  && apt-get autoremove --yes --purge \
  && apt-get clean \
