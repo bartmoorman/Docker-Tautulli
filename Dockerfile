@@ -6,6 +6,7 @@ WORKDIR /opt
 
 RUN apt-get update \
  && apt-get install --yes --no-install-recommends \
+    curl \
     git \
     python \
  && git clone -b beta https://github.com/JonnyWong16/plexpy.git \
@@ -20,3 +21,5 @@ VOLUME /config
 EXPOSE 8181
 
 CMD ["/etc/tautulli/start.sh"]
+
+HEALTHCHECK --interval=60s --timeout=5s CMD curl --silent --location --fail http://localhost:8181/ > /dev/null || exit 1
