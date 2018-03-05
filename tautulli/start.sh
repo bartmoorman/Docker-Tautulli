@@ -1,5 +1,5 @@
 #!/bin/bash
 exec $(which python) \
-    /opt/plexpy/PlexPy.py \
+    /opt/Tautulli/Tautulli.py \
     --datadir /config \
     --nolaunch
