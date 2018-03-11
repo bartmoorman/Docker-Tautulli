@@ -9,7 +9,7 @@ RUN apt-get update \
     curl \
     git \
     python \
- && git clone -b beta https://github.com/Tautulli/Tautulli.git \
+ && git clone https://github.com/Tautulli/Tautulli.git \
  && apt-get autoremove --yes --purge \
  && apt-get clean \
  && rm --recursive --force /var/lib/apt/lists/* /tmp/* /var/tmp/*
