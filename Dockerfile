@@ -2,14 +2,15 @@ FROM bmoorman/ubuntu:xenial
 
 ARG DEBIAN_FRONTEND="noninteractive"
 
-WORKDIR /opt
+WORKDIR /opt/Tautulli
+
+COPY Tautulli .
 
 RUN apt-get update \
  && apt-get install --yes --no-install-recommends \
     curl \
     git \
     python \
- && git clone https://github.com/Tautulli/Tautulli.git \
  && apt-get autoremove --yes --purge \
  && apt-get clean \
  && rm --recursive --force /var/lib/apt/lists/* /tmp/* /var/tmp/*
