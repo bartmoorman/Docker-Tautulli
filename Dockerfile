@@ -9,6 +9,7 @@ RUN apt-get update \
     curl \
     git \
     python \
+    python-pkg-resources \
  && git clone https://github.com/Tautulli/Tautulli.git \
  && apt-get autoremove --yes --purge \
  && apt-get clean \
