@@ -1,5 +1,7 @@
 FROM bmoorman/ubuntu:xenial
 
+ENV TAUTULLI_PORT="8181"
+
 ARG DEBIAN_FRONTEND="noninteractive"
 
 WORKDIR /opt
@@ -19,8 +21,8 @@ COPY tautulli/ /etc/tautulli/
 
 VOLUME /config
 
-EXPOSE 8181
+EXPOSE ${TAUTULLI_PORT}
 
 CMD ["/etc/tautulli/start.sh"]
 
-HEALTHCHECK --interval=60s --timeout=5s CMD curl --silent --location --fail http://localhost:8181/ > /dev/null || exit 1
+HEALTHCHECK --interval=60s --timeout=5s CMD curl --head --insecure --silent --show-error --fail "http://localhost:${TAUTULLI_PORT}/" || exit 1
