@@ -11,8 +11,14 @@ RUN apt-get update \
     curl \
     git \
     python \
-    python-pkg-resources \
+    python-numpy \
+    python-pip \
+    python-requests \
+    python-setuptools \
+    python-wheel \
  && git clone https://github.com/Tautulli/Tautulli.git \
+ && git clone https://github.com/blacktwin/JBOPS.git \
+ && pip install plexapi \
  && apt-get autoremove --yes --purge \
  && apt-get clean \
  && rm --recursive --force /var/lib/apt/lists/* /tmp/* /var/tmp/*
