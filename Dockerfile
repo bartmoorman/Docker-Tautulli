@@ -1,4 +1,4 @@
-FROM bmoorman/ubuntu:xenial
+FROM bmoorman/ubuntu:bionic
 
 ENV TAUTULLI_PORT="8181"
 
