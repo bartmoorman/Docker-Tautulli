@@ -14,8 +14,8 @@ RUN apt-get update \
     python-pip \
     python-setuptools \
     python-wheel \
- && git clone https://github.com/Tautulli/Tautulli.git \
- && git clone https://github.com/iVirus/JBOPS.git \
+ && git clone --single-branch https://github.com/Tautulli/Tautulli.git \
+ && git clone --single-branch https://github.com/iVirus/JBOPS.git \
  && pip install -r JBOPS/requirements.txt \
  && apt-get autoremove --yes --purge \
  && apt-get clean \
