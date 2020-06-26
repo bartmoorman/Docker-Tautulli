@@ -3,6 +3,7 @@
 docker run \
 --detach \
 --name tautulli \
+--restart unless-stopped \
 --publish 8181:8181 \
 --volume tautulli-config:/config \
 --volume plex-config:/data:ro \
@@ -16,6 +17,7 @@ services:
   tautulli:
     image: bmoorman/tautulli:latest
     container_name: tautulli
+    restart: unless-stopped
     ports:
       - "8181:8181"
     volumes:
@@ -28,4 +30,6 @@ volumes:
 ```
 
 ### Environment Variables
-* **TZ** Sets the timezone. Default `America/Denver`.
+|Variable|Description|Default|
+|--------|-----------|-------|
+|TZ|Sets the timezone|`America/Denver`|
