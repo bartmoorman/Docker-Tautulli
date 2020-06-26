@@ -1,8 +1,8 @@
 FROM bmoorman/ubuntu:bionic
 
-ENV TAUTULLI_PORT="8181"
+ARG DEBIAN_FRONTEND=noninteractive
 
-ARG DEBIAN_FRONTEND="noninteractive"
+ENV TAUTULLI_PORT=8181
 
 WORKDIR /opt
 

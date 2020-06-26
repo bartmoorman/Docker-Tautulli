@@ -26,3 +26,6 @@ volumes:
   tautulli-config:
   plex-config:
 ```
+
+### Environment Variables
+* **TZ** Sets the timezone. Default `America/Denver`.
