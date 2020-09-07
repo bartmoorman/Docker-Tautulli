@@ -10,13 +10,13 @@ RUN apt-get update \
  && apt-get install --yes --no-install-recommends \
     curl \
     git \
-    python \
-    python-pip \
-    python-setuptools \
-    python-wheel \
+    python3 \
+    python3-pip \
+    python3-setuptools \
+    python3-wheel \
  && git clone --single-branch https://github.com/Tautulli/Tautulli.git \
  && git clone --single-branch https://github.com/blacktwin/JBOPS.git \
- && pip install -r JBOPS/requirements.txt \
+ && pip3 install -r JBOPS/requirements.txt \
  && apt-get autoremove --yes --purge \
  && apt-get clean \
  && rm --recursive --force /var/lib/apt/lists/* /tmp/* /var/tmp/*
