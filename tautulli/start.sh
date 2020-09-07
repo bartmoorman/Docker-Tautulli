@@ -1,5 +1,5 @@
 #!/bin/bash
-exec $(which python) \
+exec $(which python3) \
     /opt/Tautulli/Tautulli.py \
     --datadir /config \
     --nolaunch
