@@ -8,7 +8,6 @@ WORKDIR /opt
 
 RUN apt-get update \
  && apt-get install --yes --no-install-recommends \
-    curl \
     git \
     python3 \
     python3-pip \
